@@ -1,0 +1,19 @@
+# VS缓存
+.vs/
+# 编译输出目录
+x64/
+Debug/
+Release/
+# 二进制产物
+*.obj
+*.pdb
+*.exe
+*.ilk
+# 用户私有配置
+*.vcxproj.user
+*.vcxproj*
+#中间文件
+*.tlog
+*.log
+moc_*.cpp
+ui_*.h
