@@ -1,0 +1,8 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  E:\CUDA\Learning\CudaStudy\Week1\Day3\Demo\CudaFunction>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "E:\VS2022\IDE\VC\Tools\MSVC\14.40.33807\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include"  -G   --keep-dir CudaFunction\x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdCudaFunction\x64\Debug\vc143.pdb" -o E:\CUDA\Learning\CudaStudy\Week1\Day3\Demo\CudaFunction\CudaFunction\x64\Debug\kernel.cu.obj "E:\CUDA\Learning\CudaStudy\Week1\Day3\Demo\CudaFunction\kernel.cu" 
+CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+  kernel.cu
+  tmpxft_00003868_00000000-7_kernel.cudafe1.cpp
+E:\CUDA\Learning\CudaStudy\Week1\Day3\Demo\CudaFunction\kernel.cu(53): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+  CudaFunction.vcxproj -> E:\CUDA\Learning\CudaStudy\Week1\Day3\Demo\CudaFunction\x64\Debug\CudaFunction.exe

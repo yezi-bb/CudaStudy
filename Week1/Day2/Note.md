@@ -8,15 +8,7 @@
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 cudaError_t cudaMalloc(void** devPtr, size_t size);
@@ -35,15 +27,7 @@ cudaError_t cudaMalloc(void** devPtr, size_t size);
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 float* d_data = nullptr;
@@ -64,15 +48,7 @@ cudaMalloc(&d_data, byteSize);
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 cudaError_t cudaFree(void* devPtr);
@@ -95,15 +71,7 @@ cudaError_t cudaFree(void* devPtr);
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 float* d_data;
@@ -119,15 +87,7 @@ d_data = nullptr;
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 cudaError_t cudaMemcpy(
@@ -152,15 +112,7 @@ cudaError_t cudaMemcpy(
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 cudaError_t cudaMallocHost(void** hostPtr, size_t size);
@@ -180,15 +132,7 @@ cudaError_t cudaMallocHost(void** hostPtr, size_t size);
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 enum cudaMemcpyKind
@@ -210,15 +154,7 @@ CPU 生成 / 读取原始数据，上传到 GPU 显存，供核函数并行计�
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 // 1.CPU分配主机内存
@@ -254,15 +190,7 @@ GPU 完成并行运算后，把计算结果传回 CPU，用于打印、存储、
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 // 同步等待GPU核函数执行完毕
@@ -300,15 +228,7 @@ delete[] h_data;
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 float *d_src, *d_dst;
@@ -338,15 +258,7 @@ cudaMemcpy(d_dst, d_src, bytes, cudaMemcpyDeviceToDevice);
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 #include <iostream>
