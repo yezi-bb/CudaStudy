@@ -12,6 +12,7 @@ Release/
 # 用户私有配置
 *.vcxproj.user
 *.vcxproj*
+*.sln
 #中间文件
 *.tlog
 *.log
