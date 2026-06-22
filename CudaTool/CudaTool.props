@@ -1,59 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!-- 定义当前props文件所在根目录，自动获取相对路径，不用手动改绝对路径 -->
-  <PropertyGroup Label="Globals">
-    <CudaToolRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory)CudaTool.props))</CudaToolRoot>
-    <CudaToolInclude>$(CudaToolRoot)include\</CudaToolInclude>
-    <CudaToolLibBase>$(CudaToolRoot)lib\x64\</CudaToolLibBase>
-    <CudaToolDllBase>$(CudaToolRoot)dll\x64\</CudaToolDllBase>
-  </PropertyGroup>
-
-  <!-- 1. C/C++ 通用配置：附加包含目录 -->
-  <ItemDefinitionGroup>
-    <ClCompile>
-      <!-- 添加头文件搜索路径 -->
-      <AdditionalIncludeDirectories>$(CudaToolInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-  </ItemDefinitionGroup>
-
-  <!-- 2. 链接器配置，区分 Debug / Release 库目录和依赖 -->
-  <!-- Debug x64 配置 -->
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Link>
-      <!-- 库搜索目录 -->
-      <AdditionalLibraryDirectories>$(CudaToolLibBase)Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <!-- 链接依赖lib -->
-      <AdditionalDependencies>CudaTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-
-  <!-- Release x64 配置 -->
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Link>
-      <AdditionalLibraryDirectories>$(CudaToolLibBase)Release\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CudaTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-
-  <!-- 3. CUDA NVCC 编译适配：如果项目带 .cu 文件，添加头文件路径 -->
-  <ItemDefinitionGroup>
-    <CudaCompile>
-      <AdditionalIncludeDirectories>$(CudaToolInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </CudaCompile>
-  </ItemDefinitionGroup>
-
-  <!-- 可选：自动复制dll到输出目录（编译后自动拷贝dll，不用手动复制） -->
-  <Target Name="CopyCudaToolDllAfterBuild" AfterTargets="Build">
-    <Message Text="正在复制CudaTool对应DLL到输出目录..." Importance="High"/>
-    <!-- Debug DLL复制 -->
-    <Copy Condition="'$(Configuration)'=='Debug'"
-          SourceFiles="$(CudaToolDllBase)Debug\CudaTool.dll"
-          DestinationFolder="$(OutDir)"
-          SkipUnchangedFiles="true"/>
-    <!-- Release DLL复制 -->
-    <Copy Condition="'$(Configuration)'=='Release'"
-          SourceFiles="$(CudaToolDllBase)Release\CudaTool.dll"
-          DestinationFolder="$(OutDir)"
-          SkipUnchangedFiles="true"/>
-  </Target>
-</Project>
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <CudaToolRoot>$(MSBuildThisFileDirectory)</CudaToolRoot>
+    <CudaToolInclude>$(CudaToolRoot)include\</CudaToolInclude>
+    <CudaToolLibBase>$(CudaToolRoot)lib\x64\</CudaToolLibBase>
+    <CudaToolDllBase>$(CudaToolRoot)dll\x64\</CudaToolDllBase>
+  </PropertyGroup>
+
+  <!-- 头文件目录统一配置 -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(CudaToolInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <CudaCompile>
+      <AdditionalIncludeDirectories>$(CudaToolInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Debug x64 链接 -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>$(CudaToolLibBase)Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CudaTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- Release x64 链接 -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>$(CudaToolLibBase)Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CudaTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- 编译后复制 DLL -->
+  <Target Name="CopyCudaToolDll" AfterTargets="Build" Condition="'$(ConfigurationType)'=='Application'">
+    <Error Condition="'$(Configuration)'=='Debug' and !Exists('$(CudaToolDllBase)Debug\CudaTool.dll')"
+           Text="错误：缺失 Debug 版本 CudaTool.dll，路径：$(CudaToolDllBase)Debug"/>
+    <Error Condition="'$(Configuration)'=='Release' and !Exists('$(CudaToolDllBase)Release\CudaTool.dll')"
+           Text="错误：缺失 Release 版本 CudaTool.dll，路径：$(CudaToolDllBase)Release"/>
+
+    <Copy Condition="'$(Configuration)'=='Debug'"
+          SourceFiles="$(CudaToolDllBase)Debug\CudaTool.dll"
+          DestinationFolder="$(OutDir)" SkipUnchangedFiles="true"/>
+    <Copy Condition="'$(Configuration)'=='Release'"
+          SourceFiles="$(CudaToolDllBase)Release\CudaTool.dll"
+          DestinationFolder="$(OutDir)" SkipUnchangedFiles="true"/>
+  </Target>
+</Project>
