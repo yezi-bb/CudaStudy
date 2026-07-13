@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ExternProRoot>$(MSBuildThisFileDirectory)</ExternProRoot>
+    <ExternProInclude>$(ExternProRoot)include\</ExternProInclude>
+    <ExternProLibBase>$(ExternProRoot)lib\x64\</ExternProLibBase>
+    <ExternProDllBase>$(ExternProRoot)dll\x64\</ExternProDllBase>
+  </PropertyGroup>
+
+  <!-- 头文件目录（所有 C++ 工程均生效） -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ExternProInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- CUDA 头文件目录（须先启用 CUDA 生成定制，否则 VS 属性管理器会报无效） -->
+  <ItemDefinitionGroup Condition="Exists('$(VCTargetsPath)\BuildCustomizations\CUDA 12.9.props')">
+    <CudaCompile>
+      <AdditionalIncludeDirectories>$(ExternProInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Debug x64 链接 -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>$(ExternProLibBase)Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CudaTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- Release x64 链接 -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>$(ExternProLibBase)Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CudaTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- 编译后复制 DLL（仅 Application 工程） -->
+  <Target Name="CopyCudaToolDll" AfterTargets="Build" Condition="'$(ConfigurationType)'=='Application'">
+    <Error Condition="'$(Configuration)'=='Debug' and !Exists('$(ExternProDllBase)Debug\CudaTool.dll')"
+           Text="错误：缺失 Debug 版本 CudaTool.dll，路径：$(ExternProDllBase)Debug" />
+    <Error Condition="'$(Configuration)'=='Release' and !Exists('$(ExternProDllBase)Release\CudaTool.dll')"
+           Text="错误：缺失 Release 版本 CudaTool.dll，路径：$(ExternProDllBase)Release" />
+
+    <Copy Condition="'$(Configuration)'=='Debug'"
+          SourceFiles="$(ExternProDllBase)Debug\CudaTool.dll"
+          DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <Copy Condition="'$(Configuration)'=='Release'"
+          SourceFiles="$(ExternProDllBase)Release\CudaTool.dll"
+          DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

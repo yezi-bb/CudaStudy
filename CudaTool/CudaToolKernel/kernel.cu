@@ -146,3 +146,44 @@ template CUDA_TOOL_API void LaunchBinarySegmentationKernelImp<uint16_t>(uint16_t
 template __global__ void BinarySegmentationKernel<float>(float*, int, int, float);
 template CUDA_TOOL_API void LaunchBinarySegmentationKernelImp<float>(float*, int, int, float);
 #pragma endregion
+
+
+
+#pragma region  滤波算子
+
+// 卷积填充模式：控制输出图像是否变大、不变
+enum class ConvPaddingMode : int
+{
+	CONV_PADDING_VALID = 0,		 // 无填充，输出缩小
+	CONV_PADDING_SAME = 1,		 // 填充，输出和原图尺寸一致
+	CONV_PADDING_FULL = 2,		// 全填充，输出尺寸变大
+	CONV_PADDING_MIRROR = 3     // 镜像填充(医疗OCT专用，消除边缘黑边)
+};
+
+// 卷积步长模式：控制图像缩小倍率
+enum class ConvStrideMode : int
+{
+	CONV_STRIDE_1 = 1,    // 步长1，不缩小，标准平滑滤波
+	CONV_STRIDE_2 = 2,    // 步长2，宽高各缩小1/2
+	CONV_STRIDE_3 = 3,    // 步长3，宽高各缩小1/3
+	CONV_STRIDE_4 = 4     // 步长4，大幅下采样
+};
+
+template<typename T>
+/**
+ * Description:
+ *		卷积运算核函数
+ * @param devA			输入矩阵
+ * @param devB			输出矩阵
+ * @param width			宽度（cols）
+ * @param height		高度（rows）
+ * @param kernelSize	卷积核大小
+ * @param kernel		卷积核
+ * @param 
+ * @return 
+ */
+__global__ void ConvolutionKernel(T* devA, T* devB, int width, int height, int kernelSize, T* kernel,)
+{ 
+
+}
+#pragma endregion
