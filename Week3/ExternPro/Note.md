@@ -1,1 +1,3 @@
-练习使用的外部Cuda库存部分，参考CudaToolDemo部分
+﻿练习重点：CUDA DLL 的接口导出与模板显式实例化。
+
+详见：[CONFIG.md](./CONFIG.md)

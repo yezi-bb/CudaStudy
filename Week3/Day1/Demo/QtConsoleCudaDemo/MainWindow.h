@@ -1,4 +1,4 @@
-#ifndef MAINWINDOW_H
+ï»¿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
@@ -15,13 +15,19 @@ public:
     ~MainWindow();
 
 public slots:
-    // ´ò¿ªÍ¼Æ¬
-    void on_pushButton_Open_clicked();
-    // CUDA´¦ÀíÍ¼Ïñ
-    void on_pushButton_Run_clicked();
+    // æ‰“å¼€å›¾ç‰‡
+    void pushButton_Open_clicked();
+    // CUDAå¤„ç†å›¾åƒ
+    void pushButton_Run_clicked();
 
+
+#pragma region æ—¶é—´ç»Ÿè®¡
+    void totalCudaAlgorithm();
+    void totalCpuAlgorithm();
+
+#pragma endregion
 private:
     Ui::MainWindow* ui;
-    QImage m_originImg;    // »º´æÔ­Ê¼Í¼Ïñ
+    QImage m_originImg;    // ç¼“å­˜åŸå§‹å›¾åƒ
 };
 #endif // MAINWINDOW_H
