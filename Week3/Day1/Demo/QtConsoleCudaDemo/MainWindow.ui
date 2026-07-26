@@ -23,6 +23,15 @@
       <height>331</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QGraphicsView{
+        border: 2px solid #333333;
+        /* 可选圆角 */
+        border-radius: 4px;
+        /* 消除默认背景小缝隙（很多人踩坑） */
+        background-color: white;
+    }</string>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="m_graphicsView_out">
     <property name="geometry">
@@ -32,6 +41,15 @@
       <width>391</width>
       <height>331</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGraphicsView{
+        border: 2px solid #333333;
+        /* 可选圆角 */
+        border-radius: 4px;
+        /* 消除默认背景小缝隙（很多人踩坑） */
+        background-color: white;
+    }</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -47,17 +65,53 @@
      <string>打开图片</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="m_otsu_pushButton">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>520</x>
+      <y>80</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OTSU</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_hist_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
       <y>200</y>
       <width>121</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>二值化处理</string>
+     <string>直方图峰谷</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_enter_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>340</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>手动输入</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="m_enter_value">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>342</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -67,7 +121,7 @@
      <x>0</x>
      <y>0</y>
      <width>1174</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

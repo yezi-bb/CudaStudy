@@ -19,6 +19,10 @@ DLL_EXPORT void LaunchBinaryKernelImpl(T* d_in, T* d_out, size_t width, size_t h
 template <typename T>
 DLL_EXPORT void LaunchHistsholdKernelImpl(T* d_in, T* threshold, size_t width, size_t height);
 
+template <typename T>
+DLL_EXPORT void LaunchOTSUImpl(
+	T* d_in, T* d_outThresh, size_t width, size_t height);
+
 class DLL_EXPORT CudaTool
 {
 private:
@@ -50,6 +54,11 @@ public:
 #pragma region 求取阈值接口
 	template<typename T>
 	void LaunchHistsholdKernel(T* src, T* threshold, size_t width, size_t height);
+#pragma endregion
+
+#pragma region OTSU接口
+	template<typename T>
+	void LaunchOTSU(T* src, T* threshold, size_t width, size_t height);
 #pragma endregion
 };
 
@@ -114,6 +123,36 @@ inline void CudaTool::LaunchHistsholdKernel(T* src, T* threshold, size_t width, 
 		CheckCudaStatus(cudaMalloc(&d_threshold, sizeof(T)), "cudaMalloc threshold");
 		copyHostToDevice(d_in, src, byteSize);
 		LaunchHistsholdKernelImpl(d_in, d_threshold, width, height);
+		CheckCudaStatus(cudaGetLastError(), "HistsholdKernel launch");
+		CheckCudaStatus(cudaDeviceSynchronize(), "HistsholdKernel execute sync");
+		copyDeviceToHost(threshold, d_threshold, sizeof(T));
+
+		CheckCudaStatus(cudaFree(d_in), "cudaFree d_in");
+		d_in = nullptr;
+		CheckCudaStatus(cudaFree(d_threshold), "cudaFree threshold");
+		d_threshold = nullptr;
+	}
+	catch (...)
+	{
+		if (d_in)  cudaFree(d_in);
+		if (d_threshold) cudaFree(d_threshold);
+		throw;
+	}
+}
+
+template<typename T>
+inline void CudaTool::LaunchOTSU(T* src, T* threshold, size_t width, size_t height)
+{
+	T* d_in = nullptr;
+	T* d_threshold = nullptr;
+	size_t byteSize = width * height * sizeof(T);
+
+	try
+	{
+		CheckCudaStatus(cudaMalloc(&d_in, byteSize), "cudaMalloc d_in");
+		CheckCudaStatus(cudaMalloc(&d_threshold, sizeof(T)), "cudaMalloc threshold");
+		copyHostToDevice(d_in, src, byteSize);
+		LaunchOTSUImpl(d_in, d_threshold, width, height);
 		CheckCudaStatus(cudaGetLastError(), "HistsholdKernel launch");
 		CheckCudaStatus(cudaDeviceSynchronize(), "HistsholdKernel execute sync");
 		copyDeviceToHost(threshold, d_threshold, sizeof(T));

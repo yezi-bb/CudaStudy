@@ -20,7 +20,7 @@ void LaunchBinaryKernelImpl(T* d_in, T* d_out, size_t width, size_t height, T th
 {
 	dim3 block(16, 16);
 	dim3 grid((width + block.x - 1) / block.x, (height + block.y - 1) / block.y);
-	BinaryKernel<<<grid, block>>>(d_in, d_out, width, height, threshold);
+	BinaryKernel << <grid, block >> > (d_in, d_out, width, height, threshold);
 }
 
 // 显式实例化：DLL 目前仅导出 unsigned char 特化
@@ -30,25 +30,26 @@ template DLL_EXPORT void LaunchBinaryKernelImpl<unsigned char>(
 
 #pragma region BiModalValley 双峰谷底阈值
 // 直方图统计核：hist 使用 int 计数，必须原子加法
-__global__ void GetHistArray(unsigned char* d_in, int* d_hist, size_t width, size_t height)
+template <typename T>
+__global__ void GetHistArray(T* d_in, int* d_hist, size_t width, size_t height)
 {
 	size_t x = blockIdx.x * blockDim.x + threadIdx.x;
 	size_t y = blockIdx.y * blockDim.y + threadIdx.y;
 	if (x < width && y < height)
 	{
 		size_t id = y * width + x;
-		unsigned char grayVal = d_in[id];
+		T grayVal = d_in[id];
 		atomicAdd(&d_hist[grayVal], 1);
 	}
 }
 
-__global__ void BiModalValleyKernel(int* d_hist, unsigned char* outThreshold)
+template<typename T>
+__global__ void BiModalValleyKernel(int* d_hist, T* outThreshold)
 {
 	if (threadIdx.x != 0)
 		return;
 
 	float smooth[256];
-	// 1. 三点平滑直方图
 	for (int i = 0; i < 256; i++)
 	{
 		if (i == 0)
@@ -68,35 +69,30 @@ __global__ void BiModalValleyKernel(int* d_hist, unsigned char* outThreshold)
 			peaks[peakCnt++] = i;
 		}
 	}
-
-	// 峰值不足两组，兜底阈值 127
-	if (peakCnt < 2)
+	T valleyThresh = T(127);
+	if (peakCnt >= 2)
 	{
-		*outThreshold = 127;
-		return;
-	}
-
-	int p1 = peaks[0];
-	int p2 = peaks[peakCnt - 1];
-	if (p1 > p2)
-	{
-		int temp = p1;
-		p1 = p2;
-		p2 = temp;
-	}
-
-	// 两峰之间寻找谷底
-	int valleyPos = p1 + 1;
-	float minVal = smooth[valleyPos];
-	for (int t = p1 + 1; t < p2; t++)
-	{
-		if (smooth[t] < minVal)
+		int p1 = peaks[0];
+		int p2 = peaks[peakCnt - 1];
+		if (p1 > p2)
 		{
-			minVal = smooth[t];
-			valleyPos = t;
+			int temp = p1;
+			p1 = p2;
+			p2 = temp;
 		}
+		int valleyPos = p1 + 1;
+		float minVal = smooth[valleyPos];
+		for (int t = p1 + 1; t < p2; t++)
+		{
+			if (smooth[t] < minVal)
+			{
+				minVal = smooth[t];
+				valleyPos = t;
+			}
+		}
+		valleyThresh = static_cast<T>(valleyPos);
 	}
-	*outThreshold = static_cast<unsigned char>(valleyPos);
+	*outThreshold = valleyThresh;
 }
 
 // 主机端封装：当前直方图算法仅支持 8bit 灰度
@@ -111,13 +107,107 @@ void LaunchHistsholdKernelImpl(T* d_in, T* d_outThresh, size_t width, size_t hei
 
 	dim3 block(16, 16);
 	dim3 grid((width + block.x - 1) / block.x, (height + block.y - 1) / block.y);
-	GetHistArray<<<grid, block>>>(reinterpret_cast<unsigned char*>(d_in), d_hist, width, height);
+	GetHistArray << <grid, block >> > (reinterpret_cast<unsigned char*>(d_in), d_hist, width, height);
 
-	BiModalValleyKernel<<<1, 1>>>(d_hist, reinterpret_cast<unsigned char*>(d_outThresh));
+	BiModalValleyKernel << <1, 1 >> > (d_hist, reinterpret_cast<unsigned char*>(d_outThresh));
 
 	cudaFree(d_hist);
 }
 
 template DLL_EXPORT void LaunchHistsholdKernelImpl<unsigned char>(
+	unsigned char* d_in, unsigned char* d_outThresh, size_t width, size_t height);
+#pragma endregion
+
+
+#pragma region 大津算法 otsu
+
+// 主机端封装：\(\sigma^2(T)=w_0 w_1 (u_0-u_1)^2\)
+
+template <typename T>
+__global__ void OTSUKernel(int* dist, T* threshold, size_t width, size_t height)
+{
+	// 避免除法
+	if (threadIdx.x != 0)return;
+
+	// totalPix：图像总像素数量 N
+	const double totalPix = (double)width * height;
+	// U_total = ∑(i=0→255) i·n_i  未归一化的加权和
+	double U_total = .0;
+	for (int i = 0; i < 256; i++)
+	{
+		U_total += dist[i] * i;
+	}
+	// w0 = W₀(T) = ∑(i=0→T) n_i
+   // 阈值T以下灰度的像素总数量
+	double w0 = 0.0;
+	// u0 = U₀(T) = ∑(i=0→T) i·n_i
+	// 阈值T以下灰度「灰度 × 像素个数」累加和
+	double u0 = 0.0;
+
+	// 记录最大类间方差
+	double maxSigma = 0.0;
+	// 最优分割阈值，初始兜底127
+	unsigned char bestT = 127;
+
+	// 遍历全部候选阈值 T ∈ [0, 254]
+	for (int T = 0; T <= 254; T++)
+	{
+		// 前缀增量累加：不断扩充 <= T 的灰度集合
+		w0 += dist[T];
+		u0 += (double)T * dist[T];
+
+		// w1 = N - W₀(T)，阈值T以上灰度的像素总数量
+		double w1 = totalPix - w0;
+
+		// 边界判断：全部像素划分至同一类，无分割意义，跳过
+		if (w0 <= 0 || w1 <= 0)
+			continue;
+
+		// μ₀ = U₀ / W₀  类别C0(灰度≤T)平均灰度
+		double mu0 = u0 / w0;
+		// μ₁ = (U_total - U₀) / W₁ 类别C1(灰度>T)平均灰度
+		double mu1 = (U_total - u0) / w1;
+
+		// ω₀ = W₀ / N 类别C0像素出现概率
+		double omega0 = w0 / totalPix;
+		// ω₁ = W₁ / N 类别C1像素出现概率
+		double omega1 = w1 / totalPix;
+
+		// Otsu标准类间方差 σ_B² = ω₀ ω₁ (μ₀−μ₁)²
+		double sigma = omega0 * omega1 * (mu0 - mu1) * (mu0 - mu1);
+
+		// 更新最大值与最优阈值
+		if (sigma > maxSigma)
+		{
+			maxSigma = sigma;
+			bestT = (unsigned char)T;
+		}
+
+	}
+	// 将最优阈值写入设备显存
+	*threshold = bestT;
+}
+
+
+template <typename T>
+void LaunchOTSUImpl(T* d_in, T* d_outThresh, size_t width, size_t height)
+{
+	static_assert(sizeof(T) == 1, "LaunchOTSUImpl currently supports 8-bit pixel only");
+
+	int* d_hist = nullptr;
+	cudaMalloc(&d_hist, sizeof(int) * 256);
+	cudaMemset(d_hist, 0, sizeof(int) * 256);
+
+	dim3 block(16, 16);
+	dim3 grid((width + block.x - 1) / block.x, (height + block.y - 1) / block.y);
+	GetHistArray << <grid, block >> > (d_in, d_hist, width, height);
+
+	// 大津算法求取阈值
+	OTSUKernel << <1, 1 >> > (d_hist, d_outThresh, width, height);
+
+	cudaFree(d_hist);
+}
+
+template DLL_EXPORT void LaunchOTSUImpl<unsigned char>(
 	unsigned char* d_in, unsigned char* d_outThresh, size_t width, size_t height);
 #pragma endregion
