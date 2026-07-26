@@ -1,4 +1,6 @@
-﻿#include "CudaTool.h"
+﻿#include "cuda_runtime.h"
+#include "device_launch_parameters.h"
+#include "CudaTool.h"
 
 #pragma region BinaryKernel
 template <typename T>
