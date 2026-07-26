@@ -11,7 +11,9 @@ MainWindow::MainWindow(QWidget* parent)
 {
 	ui->setupUi(this);
 	connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::pushButton_Open_clicked);
-	connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::pushButton_Run_clicked);
+	connect(ui->m_otsu_pushButton, &QPushButton::clicked, this, &MainWindow::pushButton_Run_clicked);
+    connect(ui->m_hist_pushButton, &QPushButton::clicked, this, &MainWindow::pushButton_Run_clicked);
+    connect(ui->m_enter_pushButton, &QPushButton::clicked, this, &MainWindow::pushButton_Run_clicked);
 }
 
 MainWindow::~MainWindow()
@@ -68,9 +70,28 @@ void MainWindow::pushButton_Run_clicked()
 	// ===== 调用CUDA二值化 =====
 	unsigned char* threshold = new unsigned char[0]; // 先改成127测试！
 
-	//求取阈值
-	CudaTool::getInstance().LaunchHistsholdKernel(grayImg.bits(), threshold, w, h);
-	qDebug() << "阈值：" << *threshold ;
+	int sender_type =
+		sender() == ui->m_otsu_pushButton ? 1 :
+		sender() == ui->m_hist_pushButton ? 2 :
+		sender() == ui->m_enter_pushButton ? 3 : 0;
+	switch (sender_type)
+	{
+	case 1:
+		//求取阈值
+		CudaTool::getInstance().LaunchOTSU(grayImg.bits(), threshold, w, h);
+		qDebug() << "otsu阈值：" << *threshold;
+		break;
+	case 2:
+		//求取阈值
+		CudaTool::getInstance().LaunchHistsholdKernel(grayImg.bits(), threshold, w, h);
+		qDebug() << "otsu阈值：" << *threshold;
+		break;
+     case 3:
+		 *threshold = ui->m_enter_value->text().toInt();
+		 qDebug() << "手动输入阈值：" << *threshold;
+	default:
+		break;
+	}
 	CudaTool::getInstance().LaunchBinaryKernel(grayImg.bits(), outBuf, w, h, *threshold);
 
 	QImage resultImg(outBuf, w, h, w, QImage::Format_Grayscale8);
@@ -84,7 +105,6 @@ void MainWindow::pushButton_Run_clicked()
 	sceneResult->addPixmap(QPixmap::fromImage(safeImage));
 	ui->m_graphicsView_out->setScene(sceneResult);
 	ui->m_graphicsView_out->fitInView(sceneResult->sceneRect(), Qt::KeepAspectRatio);
-
 }
 
 const QString ori_file = "./images";
@@ -133,7 +153,7 @@ void MainWindow::totalCudaAlgorithm()
 		memset(outBuf, 0, w * h);
 
 		unsigned char threshold = 80;
-		CudaTool::getInstance().LaunchBinaryKernel(grayImg.bits(), outBuf, w, h, threshold);
+		CudaTool::getInstance().LaunchOTSU(grayImg.bits(), &threshold, w, h);
 
 		QImage resultImg(outBuf, w, h, w, QImage::Format_Grayscale8);
 		QImage saveImg = resultImg.copy(); // 内存独立！
