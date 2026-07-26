@@ -21,14 +21,6 @@
 
 plaintext
 
-
-
-
-
-
-
-
-
 ```
 CudaTool
 ├─ include          # 对外头文件输出目录
@@ -73,15 +65,7 @@ CudaTool
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 #pragma once
@@ -109,15 +93,7 @@ CUDA_TOOL_API void CheckCudaStatus(cudaError_t status, const char* msg);
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 #include "CudaTool.h"
@@ -158,15 +134,7 @@ void CheckCudaStatus(cudaError_t status, const char* msg)
 
 cpp
 
-
-
 运行
-
-
-
-
-
-
 
 ```
 #include "CudaTool.h"
@@ -273,56 +241,106 @@ xml
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!-- 自动获取props根目录，全相对路径，移动文件夹无需改配置 -->
-  <PropertyGroup Label="Globals">
-    <CudaToolRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory)CudaTool.props))</CudaToolRoot>
+
+  <PropertyGroup>
+
+    <CudaToolRoot>$(MSBuildThisFileDirectory)</CudaToolRoot>
+
     <CudaToolInclude>$(CudaToolRoot)include\</CudaToolInclude>
+
     <CudaToolLibBase>$(CudaToolRoot)lib\x64\</CudaToolLibBase>
+
     <CudaToolDllBase>$(CudaToolRoot)dll\x64\</CudaToolDllBase>
+
   </PropertyGroup>
 
-  <!-- C++编译器头文件路径 -->
+
+
+  <!-- 头文件目录统一配置 -->
+
   <ItemDefinitionGroup>
+
     <ClCompile>
+
       <AdditionalIncludeDirectories>$(CudaToolInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+
     </ClCompile>
-  </ItemDefinitionGroup>
 
-  <!-- CUDA NVCC编译器头文件路径 -->
-  <ItemDefinitionGroup>
     <CudaCompile>
+
       <AdditionalIncludeDirectories>$(CudaToolInclude);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+
     </CudaCompile>
+
   </ItemDefinitionGroup>
 
-  <!-- Debug x64 链接配置 -->
+
+
+  <!-- Debug x64 链接 -->
+
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+
     <Link>
-      <AdditionalLibraryDirectories>$(CudaToolLibBase)Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+
+      <AdditionalLibraryDirectories>$(CudaToolLibBase)Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+
       <AdditionalDependencies>CudaTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+
     </Link>
+
   </ItemDefinitionGroup>
 
-  <!-- Release x64 链接配置 -->
+
+
+  <!-- Release x64 链接 -->
+
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+
     <Link>
-      <AdditionalLibraryDirectories>$(CudaToolLibBase)Release\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+
+      <AdditionalLibraryDirectories>$(CudaToolLibBase)Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+
       <AdditionalDependencies>CudaTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+
     </Link>
+
   </ItemDefinitionGroup>
 
-  <!-- 编译完成自动拷贝dll到exe输出目录，无需手动复制 -->
-  <Target Name="CopyCudaToolDllAfterBuild" AfterTargets="Build">
-    <Message Text="自动复制CudaTool对应DLL到输出目录" Importance="High"/>
+
+
+  <!-- 编译后复制 DLL -->
+
+  <Target Name="CopyCudaToolDll" AfterTargets="Build" Condition="'$(ConfigurationType)'=='Application'">
+
+    <Error Condition="'$(Configuration)'=='Debug' and !Exists('$(CudaToolDllBase)Debug\CudaTool.dll')"
+
+           Text="错误：缺失 Debug 版本 CudaTool.dll，路径：$(CudaToolDllBase)Debug"/>
+
+    <Error Condition="'$(Configuration)'=='Release' and !Exists('$(CudaToolDllBase)Release\CudaTool.dll')"
+
+           Text="错误：缺失 Release 版本 CudaTool.dll，路径：$(CudaToolDllBase)Release"/>
+
+
+
     <Copy Condition="'$(Configuration)'=='Debug'"
+
           SourceFiles="$(CudaToolDllBase)Debug\CudaTool.dll"
+
           DestinationFolder="$(OutDir)" SkipUnchangedFiles="true"/>
+
     <Copy Condition="'$(Configuration)'=='Release'"
+
           SourceFiles="$(CudaToolDllBase)Release\CudaTool.dll"
+
           DestinationFolder="$(OutDir)" SkipUnchangedFiles="true"/>
+
   </Target>
+
 </Project>
+
+
 ```
 
 ## 6. 库编译校验步骤

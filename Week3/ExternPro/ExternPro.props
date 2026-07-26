@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--
+    ExternPro 外部调用属性表：
+    - 调用方工程导入本文件后，自动获得 include / lib / dll 拷贝配置
+    - CudaTool.h 内含 cuda_runtime.h，并在头文件里调用 cudaMalloc/cudaMemcpy，
+      因此调用方必须同时具备 CUDA Toolkit 的 include 与 cudart 链接依赖
+  -->
+  <PropertyGroup>
+    <ExternProRoot>$(MSBuildThisFileDirectory)</ExternProRoot>
+    <ExternProInclude>$(ExternProRoot)include\</ExternProInclude>
+    <ExternProLibBase>$(ExternProRoot)lib\x64\</ExternProLibBase>
+    <ExternProDllBase>$(ExternProRoot)dll\x64\</ExternProDllBase>
+    <!-- CUDA_PATH 由 Toolkit 安装写入环境变量；缺失时回退默认路径 -->
+    <CudaToolkitDir Condition="'$(CudaToolkitDir)'=='' and '$(CUDA_PATH)'!=''">$(CUDA_PATH)\</CudaToolkitDir>
+    <CudaToolkitDir Condition="'$(CudaToolkitDir)'==''">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\</CudaToolkitDir>
+  </PropertyGroup>
+
+  <!-- 头文件：本库 + CUDA Runtime（调用方即使不写 .cu 也需要） -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ExternProInclude);$(CudaToolkitDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- 若调用方启用了 CUDA 生成定制，同步给 .cu -->
+  <ItemDefinitionGroup Condition="Exists('$(VCTargetsPath)\BuildCustomizations\CUDA 12.9.props')">
+    <CudaCompile>
+      <AdditionalIncludeDirectories>$(ExternProInclude);$(CudaToolkitDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Debug x64 链接 -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>$(ExternProLibBase)Debug;$(CudaToolkitDir)lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <!-- 模板实现编译在调用方，故还需 cudart；与库工程 Debug/Release 勿交叉 -->
+      <AdditionalDependencies>CudaTool.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- Release x64 链接 -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>$(ExternProLibBase)Release;$(CudaToolkitDir)lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CudaTool.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- 编译后复制 DLL 到调用方输出目录（仅 Application） -->
+  <Target Name="CopyCudaToolDll" AfterTargets="Build" Condition="'$(ConfigurationType)'=='Application'">
+    <Error Condition="'$(Configuration)'=='Debug' and !Exists('$(ExternProDllBase)Debug\CudaTool.dll')"
+           Text="错误：缺失 Debug 版本 CudaTool.dll，路径：$(ExternProDllBase)Debug。请先用 Debug|x64 编译 ExternPro/CudaExtern。" />
+    <Error Condition="'$(Configuration)'=='Release' and !Exists('$(ExternProDllBase)Release\CudaTool.dll')"
+           Text="错误：缺失 Release 版本 CudaTool.dll，路径：$(ExternProDllBase)Release。请先用 Release|x64 编译 ExternPro/CudaExtern。" />
+
+    <Copy Condition="'$(Configuration)'=='Debug'"
+          SourceFiles="$(ExternProDllBase)Debug\CudaTool.dll"
+          DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <Copy Condition="'$(Configuration)'=='Release'"
+          SourceFiles="$(ExternProDllBase)Release\CudaTool.dll"
+          DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>
