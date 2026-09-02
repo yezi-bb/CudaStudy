@@ -158,7 +158,7 @@ __global__ void OTSUKernel(int* dist, T* threshold, size_t width, size_t height)
 
 		// w1 = N - W₀(T)，阈值T以上灰度的像素总数量
 		double w1 = totalPix - w0;
-
+QtConsoleApplication1
 		// 边界判断：全部像素划分至同一类，无分割意义，跳过
 		if (w0 <= 0 || w1 <= 0)
 			continue;

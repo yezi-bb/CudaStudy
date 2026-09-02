@@ -1,0 +1,60 @@
+Dataset.file_meta -------------------------------
+(0002,0000) File Meta Information Group Length  UL: 198
+(0002,0001) File Meta Information Version       OB: b'\x00\x01'
+(0002,0002) Media Storage SOP Class UID         UI: Secondary Capture Image Storage
+(0002,0003) Media Storage SOP Instance UID      UI: 1.2.276.0.7230010.3.1.4.502219441.2608.1783647543.935
+(0002,0010) Transfer Syntax UID                 UI: Explicit VR Little Endian
+(0002,0012) Implementation Class UID            UI: 1.2.276.0.7230010.3.0.3.6.9
+(0002,0013) Implementation Version Name         SH: 'OFFIS_DCMTK_369'
+-------------------------------------------------
+(0008,0008) Image Type                          CS: 'ORIGINAL/PRIMARY/INTRAVASCULAR'
+(0008,0012) Instance Creation Date              DA: ''
+(0008,0013) Instance Creation Time              TM: ''
+(0008,0016) SOP Class UID                       UI: Secondary Capture Image Storage
+(0008,0020) Study Date                          DA: ''
+(0008,0021) Series Date                         DA: ''
+(0008,0022) Acquisition Date                    DA: ''
+(0008,0030) Study Time                          TM: ''
+(0008,0031) Series Time                         TM: ''
+(0008,0032) Acquisition Time                    TM: ''
+(0008,0060) Modality                            CS: ''
+(0008,0064) Conversion Type                     CS: ''
+(0008,0070) Manufacturer                        LO: ''
+(0008,0080) Institution Name                    LO: '0'
+(0008,0081) Institution Address                 ST: ''
+(0008,0201) Timezone Offset From UTC            SH: ''
+(0008,1090) Manufacturer's Model Name           LO: ''
+(0010,0010) Patient's Name                      PN: '123'
+(0010,0020) Patient ID                          LO: 'test'
+(0010,0030) Patient's Birth Date                DA: ''
+(0010,0040) Patient's Sex                       CS: 'O'
+(0018,0015) Body Part Examined                  CS: ''
+(0018,1016) Secondary Capture Device Manufactur LO: ''
+(0018,1019) Secondary Capture Device Software V LO: ''
+(0018,1020) Software Versions                   LO: 'V316.0.05AI2.12300'
+(0018,1063) Frame Time                          DS: '66.7'
+(0018,3101) IVUS Pullback Rate                  DS: '20'
+(0020,0011) Series Number                       IS: '4'
+(0028,0002) Samples per Pixel                   US: 1
+(0028,0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028,0006) Planar Configuration                US: 0
+(0028,0008) Number of Frames                    IS: '400'
+(0028,0010) Rows                                US: 497
+(0028,0011) Columns                             US: 1025
+(0028,0030) Pixel Spacing                       DS: '0'
+(0028,0100) Bits Allocated                      US: 16
+(0028,0101) Bits Stored                         US: 16
+(0028,0102) High Bit                            US: 7
+(0028,0103) Pixel Representation                US: 0
+(0029,0011) Private Creator                     LO: 'Contrast-0-0.00737'
+(0029,0012) Private Creator                     LO: '1'
+(0029,0013) Private Creator                     LO: 'T07392'
+(0029,0014) Private Creator                     LO: '1'
+(0029,0015) Private Creator                     LO: '9352'
+(0029,0016) Private Creator                     LO: '0'
+(0029,0017) Private Creator                     LO: '0.89'
+(0029,0018) Private Creator                     LO: '0105042601020353'
+(0029,0019) Private Creator                     LO: '0'
+(0029,0020) Private Creator                     LO: '0'
+(0029,0021) Private Creator                     LO: 'Procedure_Vessel'
+(7FE0,0010) Pixel Data                          OW: Array of 407540000 elements

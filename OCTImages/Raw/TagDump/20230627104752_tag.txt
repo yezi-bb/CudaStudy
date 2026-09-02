@@ -1,0 +1,46 @@
+(0002,0000) File Meta Information Group Length  UL: 198
+(0002,0001) File Meta Information Version       OB: b'\x00\x01'
+(0002,0002) Media Storage SOP Class UID         UI: Secondary Capture Image Storage
+(0002,0003) Media Storage SOP Instance UID      UI: 1.2.276.0.7230010.3.1.4.2006543395.6012.1676174680.791
+(0002,0010) Transfer Syntax UID                 UI: Explicit VR Little Endian
+(0002,0012) Implementation Class UID            UI: 1.2.276.0.7230010.3.0.3.6.1
+(0002,0013) Implementation Version Name         SH: 'OFFIS_DCMTK_361'
+
+(0008,0008) Image Type                          CS: 'ORIGINAL/PRIMARY/INTRAVASCULAR'
+(0008,0012) Instance Creation Date              DA: '\x06'
+(0008,0013) Instance Creation Time              TM: ''
+(0008,0016) SOP Class UID                       UI: Secondary Capture Image Storage
+(0008,0018) SOP Instance UID                    UI: 1.2.276.0.7230010.3.1.4.2006543395.6012.1676174680.791
+(0008,0020) Study Date                          DA: ''
+(0008,0021) Series Date                         DA: ''
+(0008,0022) Acquisition Date                    DA: ''
+(0008,0030) Study Time                          TM: ''
+(0008,0031) Series Time                         TM: ''
+(0008,0032) Acquisition Time                    TM: ''
+(0008,0060) Modality                            CS: '\x01'
+(0008,0064) Conversion Type                     CS: '\x80\x8c/\x1aÈ'
+(0008,0070) Manufacturer                        LO: 'VivoLight'
+(0008,0080) Institution Name                    LO: 'ÿÿÿÿ'
+(0008,0081) Institution Address                 ST: 'X\x90/\x1aÈ'
+(0008,0201) Timezone Offset From UTC            SH: ''
+(0008,1090) Manufacturer's Model Name           LO: ''
+(0010,0010) Patient's Name                      PN: 'Öì¶þ'
+(0010,0020) Patient ID                          LO: '123'
+(0010,0030) Patient's Birth Date                DA: ''
+(0010,0040) Patient's Sex                       CS: 'O'
+(0018,0015) Body Part Examined                  CS: 'ngMessageQueue------\r\n'
+(0018,1016) Secondary Capture Device Manufactur LO: ''
+(0018,1019) Secondary Capture Device Software V LO: ' \x94/\x1aÈ'
+(0018,1020) Software Versions                   LO: 'c¬·øÿ/êN\x8b\x0c¸\x86´\x16®\x0f\x10'
+(0018,1063) Frame Time                          DS: 'nbÓÿ\x7f'
+(0020,0011) Series Number                       IS: '4'
+(0028,0002) Samples per Pixel                   US: 1
+(0028,0004) Photometric Interpretation          CS: 'MONOCHROME2'
+(0028,0006) Planar Configuration                US: 0
+(0028,0008) Number of Frames                    IS: '400'
+(0028,0010) Rows                                US: 497
+(0028,0011) Columns                             US: 1025
+(0028,0100) Bits Allocated                      US: 32
+(0028,0101) Bits Stored                         US: 32
+(0028,0102) High Bit                            US: 7
+(7FE0,0008) Float Pixel Data VR=OF length=None  # pixel bulk omitted
