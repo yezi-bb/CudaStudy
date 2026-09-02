@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 /**
  * @file cuda_utils.hpp
@@ -24,7 +24,7 @@
 #include <stdlib.h>
 #include <cstdint>
 
-namespace oct_cuda
+namespace cuda_utils
 {
 
 	/**

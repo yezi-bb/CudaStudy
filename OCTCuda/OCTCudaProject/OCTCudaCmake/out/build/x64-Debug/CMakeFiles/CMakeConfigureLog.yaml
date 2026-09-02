@@ -1,0 +1,868 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.44.35228 版
+      版权所有(C) Microsoft Corporation。保留所有权利。
+      
+      CMakeCXXCompilerId.cpp
+      Microsoft (R) Incremental Linker Version 14.44.35228.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCXXCompilerId.exe 
+      CMakeCXXCompilerId.obj 
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is MSVC, found in:
+        E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/3.31.6-msvc6/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        注意: 包含文件:  E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "注意: 包含文件:  "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1237 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+      nvcc: NVIDIA (R) Cuda compiler driver
+      Copyright (c) 2005-2025 NVIDIA Corporation
+      Built on Wed_Apr__9_19:29:17_Pacific_Daylight_Time_2025
+      Cuda compilation tools, release 12.9, V12.9.41
+      Build cuda_12.9.r12.9/compiler.35813241_0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:53 (__determine_compiler_id_test)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+      Compiler: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/nvcc.exe 
+      Build flags: 
+      Id flags: --keep;--keep-dir;tmp -v
+      
+      The output was:
+      0
+      nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+      #$ PATH=E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\VCPackages;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;E:\\VS2022\\IDE\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\HTML Help Workshop;E:\\VS2022\\IDE\\Team Tools\\DiagnosticsHub\\Collector;E:\\VS2022\\IDE\\VC\\Tools\\Llvm\\x64\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;E:\\VS2022\\IDE\\\\MSBuild\\Current\\Bin\\amd64;C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319;E:\\VS2022\\IDE\\Common7\\IDE\\;E:\\VS2022\\IDE\\Common7\\Tools\\;C:Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\bin\\win64;C:\\WINDOWS\\system32;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Anaconda3\\Library\\bin;C:\\Anaconda3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\WINDOWS\\system32;E:\\CMake\\source\\bin;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Java\\bin;C:\\Java\\JDK\\bin;C:\\Java\\JRE\\bin\\server;C:\\src\\vcpkg;E:\\NodeJs\\source\\;E:\\QTCompile\\gperf\\source\\GnuWin32\\bin;E:\\QTCompile\\bison\\source\\GnuWin32\\bin;E:\\QTCompile\\flex\\source\\GnuWin32\\bin;C:\\Beyond Compare 4;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;E:\\weixin\\IDE\\΢\xd0\xc5web\xbf\xaa\xb7\xa2\xd5߹\xa4\xbe\xdf\\dll;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code;E:\\DependencyCheck\\dependency-check\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.0\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;E:\\Matlab\\Runtime\\2023bRuntime\\R2023b\\runtime\\win64;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Pandoc\\;E:\\Cursor\\install\\cursor\\resources\\app\\bin;C:\\Program Files\\TortoiseSVN\\bin;E:\\Clangd\\clangd_22.1.0\\bin;C:\\opencv4110\\x64\\vc17\\bin;E:\\GitLFS\\install;E:\\Python31011\\install\\Scripts\\;E:\\Python31011\\install\\;e:\\Cursor\\install\\cursor\\resources\\app\\codeBin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Launcher\\;%CMAKE_ROOT%;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\.dotnet\\tools;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;E:\\VS2022\\IDE\\VC\\vcpkg
+      #$ _NVVM_BRANCH_=nvvm
+      #$ _SPACE_= 
+      #$ _CUDART_=cudart
+      #$ _HERE_=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin
+      #$ _THERE_=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin
+      #$ _TARGET_SIZE_=
+      #$ _TARGET_DIR_=
+      #$ _TARGET_SIZE_=64
+      #$ _WIN_PLATFORM_=x64
+      #$ TOP=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/..
+      #$ CICC_PATH=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../nvvm/bin
+      #$ NVVMIR_LIBRARY_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../nvvm/libdevice
+      #$ PATH=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../nvvm/bin;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\VCPackages;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;E:\\VS2022\\IDE\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\HTML Help Workshop;E:\\VS2022\\IDE\\Team Tools\\DiagnosticsHub\\Collector;E:\\VS2022\\IDE\\VC\\Tools\\Llvm\\x64\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;E:\\VS2022\\IDE\\\\MSBuild\\Current\\Bin\\amd64;C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319;E:\\VS2022\\IDE\\Common7\\IDE\\;E:\\VS2022\\IDE\\Common7\\Tools\\;C:Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\bin\\win64;C:\\WINDOWS\\system32;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Anaconda3\\Library\\bin;C:\\Anaconda3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\WINDOWS\\system32;E:\\CMake\\source\\bin;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Java\\bin;C:\\Java\\JDK\\bin;C:\\Java\\JRE\\bin\\server;C:\\src\\vcpkg;E:\\NodeJs\\source\\;E:\\QTCompile\\gperf\\source\\GnuWin32\\bin;E:\\QTCompile\\bison\\source\\GnuWin32\\bin;E:\\QTCompile\\flex\\source\\GnuWin32\\bin;C:\\Beyond Compare 4;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;E:\\weixin\\IDE\\΢\xd0\xc5web\xbf\xaa\xb7\xa2\xd5߹\xa4\xbe\xdf\\dll;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code;E:\\DependencyCheck\\dependency-check\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.0\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;E:\\Matlab\\Runtime\\2023bRuntime\\R2023b\\runtime\\win64;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Pandoc\\;E:\\Cursor\\install\\cursor\\resources\\app\\bin;C:\\Program Files\\TortoiseSVN\\bin;E:\\Clangd\\clangd_22.1.0\\bin;C:\\opencv4110\\x64\\vc17\\bin;E:\\GitLFS\\install;E:\\Python31011\\install\\Scripts\\;E:\\Python31011\\install\\;e:\\Cursor\\install\\cursor\\resources\\app\\codeBin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Launcher\\;%CMAKE_ROOT%;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\.dotnet\\tools;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;E:\\VS2022\\IDE\\VC\\vcpkg
+      #$ INCLUDES="-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"  
+      #$ LIBRARIES=  "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"
+      #$ CUDAFE_FLAGS=
+      #$ PTXAS_FLAGS=
+      #$ erase tmp/a_dlink.reg.c
+      CMakeCUDACompilerId.cu
+      #$ resource file tmp/CMakeCUDACompilerId.cpp4.ii.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]
+      #$ cl.exe @"tmp/CMakeCUDACompilerId.cpp4.ii.res" > "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      CMakeCUDACompilerId.cu
+      #$ cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      #$ resource file tmp/CMakeCUDACompilerId.cpp1.ii.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]
+      #$ cl.exe @"tmp/CMakeCUDACompilerId.cpp1.ii.res" > "tmp/CMakeCUDACompilerId.cpp1.ii" 
+      CMakeCUDACompilerId.cu
+      #$ ""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx""
+      #$ ptxas -arch=sm_52 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" 
+      #$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+      #$ resource file tmp/CMakeCUDACompilerId.obj.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"   "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.cpp" ]
+      #$ cl.exe @"tmp/CMakeCUDACompilerId.obj.res" -Fo"tmp/CMakeCUDACompilerId.obj" 
+      CMakeCUDACompilerId.cudafe1.cpp
+      #$ resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]
+      #$ nvlink -optf "tmp/a_dlink.sm_52.cubin.optf"
+      #$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+      #$ resource file tmp/a_dlink.obj.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP -EHsc -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\""  -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\crt\\link.stub" ]
+      #$ cl.exe @"tmp/a_dlink.obj.res" -Fo"tmp/a_dlink.obj" 
+      link.stub
+      #$ resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]
+      #$ cl.exe @"tmp/a.exe.res" -Fe"a.exe" 
+        正在创建库 a.lib 和对象 a.exp
+      
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.exe"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.exp"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.lib"
+      
+      The CUDA compiler identification is NVIDIA, found in:
+        E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/3.31.6-msvc6/CompilerIdCUDA/a.exe
+      The host compiler identification is MSVC
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Detecting CUDA compiler /showIncludes prefix:
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        nvcc fatal   : Don't know what to do with 'E:/c'
+        
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Detecting CUDA compiler /showIncludes prefix:
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        nvcc fatal   : Don't know what to do with 'E:/c'
+        
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:128 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:242 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed CUDA nvcc implicit link information:
+        found 'PATH=' string: [E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\VCPackages;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;E:\\VS2022\\IDE\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\HTML Help Workshop;E:\\VS2022\\IDE\\Team Tools\\DiagnosticsHub\\Collector;E:\\VS2022\\IDE\\VC\\Tools\\Llvm\\x64\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;E:\\VS2022\\IDE\\\\MSBuild\\Current\\Bin\\amd64;C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319;E:\\VS2022\\IDE\\Common7\\IDE\\;E:\\VS2022\\IDE\\Common7\\Tools\\;C:Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\bin\\win64;C:\\WINDOWS\\system32;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Anaconda3\\Library\\bin;C:\\Anaconda3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\WINDOWS\\system32;E:\\CMake\\source\\bin;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Java\\bin;C:\\Java\\JDK\\bin;C:\\Java\\JRE\\bin\\server;C:\\src\\vcpkg;E:\\NodeJs\\source\\;E:\\QTCompile\\gperf\\source\\GnuWin32\\bin;E:\\QTCompile\\bison\\source\\GnuWin32\\bin;E:\\QTCompile\\flex\\source\\GnuWin32\\bin;C:\\Beyond Compare 4;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;E:\\weixin\\IDE\\΢\xd0\xc5web\xbf\xaa\xb7\xa2\xd5߹\xa4\xbe\xdf\\dll;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code;E:\\DependencyCheck\\dependency-check\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.0\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;E:\\Matlab\\Runtime\\2023bRuntime\\R2023b\\runtime\\win64;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Pandoc\\;E:\\Cursor\\install\\cursor\\resources\\app\\bin;C:\\Program Files\\TortoiseSVN\\bin;E:\\Clangd\\clangd_22.1.0\\bin;C:\\opencv4110\\x64\\vc17\\bin;E:\\GitLFS\\install;E:\\Python31011\\install\\Scripts\\;E:\\Python31011\\install\\;e:\\Cursor\\install\\cursor\\resources\\app\\codeBin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Launcher\\;%CMAKE_ROOT%;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\.dotnet\\tools;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;E:\\VS2022\\IDE\\VC\\vcpkg]
+        found 'LIBRARIES=' string: ["/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"]
+        found 'INCLUDES=' string: ["-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"  ]
+        considering line: [nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).]
+        considering line: [erase tmp/a_dlink.reg.c]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [resource file tmp/CMakeCUDACompilerId.cpp4.ii.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.cpp4.ii.res" > "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [resource file tmp/CMakeCUDACompilerId.cpp1.ii.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.cpp1.ii.res" > "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx""]
+        considering line: [ptxas -arch=sm_52 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [resource file tmp/CMakeCUDACompilerId.obj.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"   "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.cpp" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.obj.res" -Fo"tmp/CMakeCUDACompilerId.obj" ]
+        considering line: [CMakeCUDACompilerId.cudafe1.cpp]
+        considering line: [resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]]
+          extracted link line: [resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]]
+        considering line: [nvlink -optf "tmp/a_dlink.sm_52.cubin.optf"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: [resource file tmp/a_dlink.obj.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP -EHsc -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\""  -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\crt\\link.stub" ]]
+        considering line: [cl.exe @"tmp/a_dlink.obj.res" -Fo"tmp/a_dlink.obj" ]
+        considering line: [link.stub]
+        considering line: [resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]]
+          extracted link line: [resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]]
+        considering line: [cl.exe @"tmp/a.exe.res" -Fe"a.exe" ]
+          extracted link line: [cl.exe -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib -Fe"a.exe" ]
+        considering line: [  正在创建库 a.lib 和对象 a.exp]
+        considering line: []
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld cl.exe -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib -Fe"a.exe" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [cl.exe] ==> recognize MSVC cl
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-D__NV_LEGACY_LAUNCH] ==> ignore
+          arg [-nologo] ==> ignore
+          arg [E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj] ==> ignore
+          arg [E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj] ==> ignore
+          arg [-link] ==> ignore MSVC cl option
+          arg [-INCREMENTAL:NO] ==> ignore
+          arg [/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64] ==> dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64]
+          arg [cudadevrt.lib] ==> lib [cudadevrt.lib]
+          arg [cudart_static.lib] ==> lib [cudart_static.lib]
+          arg [-Fea.exe] ==> ignore
+        collapse library dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit libs: [cudadevrt.lib;cudart_static.lib]
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:146 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:242 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed CUDA nvcc include information:
+        found 'PATH=' string: [E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\VCPackages;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;E:\\VS2022\\IDE\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\HTML Help Workshop;E:\\VS2022\\IDE\\Team Tools\\DiagnosticsHub\\Collector;E:\\VS2022\\IDE\\VC\\Tools\\Llvm\\x64\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;E:\\VS2022\\IDE\\\\MSBuild\\Current\\Bin\\amd64;C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319;E:\\VS2022\\IDE\\Common7\\IDE\\;E:\\VS2022\\IDE\\Common7\\Tools\\;C:Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\bin\\win64;C:\\WINDOWS\\system32;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Anaconda3\\Library\\bin;C:\\Anaconda3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\WINDOWS\\system32;E:\\CMake\\source\\bin;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Java\\bin;C:\\Java\\JDK\\bin;C:\\Java\\JRE\\bin\\server;C:\\src\\vcpkg;E:\\NodeJs\\source\\;E:\\QTCompile\\gperf\\source\\GnuWin32\\bin;E:\\QTCompile\\bison\\source\\GnuWin32\\bin;E:\\QTCompile\\flex\\source\\GnuWin32\\bin;C:\\Beyond Compare 4;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;E:\\weixin\\IDE\\΢\xd0\xc5web\xbf\xaa\xb7\xa2\xd5߹\xa4\xbe\xdf\\dll;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code;E:\\DependencyCheck\\dependency-check\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.0\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;E:\\Matlab\\Runtime\\2023bRuntime\\R2023b\\runtime\\win64;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Pandoc\\;E:\\Cursor\\install\\cursor\\resources\\app\\bin;C:\\Program Files\\TortoiseSVN\\bin;E:\\Clangd\\clangd_22.1.0\\bin;C:\\opencv4110\\x64\\vc17\\bin;E:\\GitLFS\\install;E:\\Python31011\\install\\Scripts\\;E:\\Python31011\\install\\;e:\\Cursor\\install\\cursor\\resources\\app\\codeBin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Launcher\\;%CMAKE_ROOT%;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\.dotnet\\tools;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;E:\\VS2022\\IDE\\VC\\vcpkg]
+        found 'LIBRARIES=' string: ["/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"]
+        found 'INCLUDES=' string: ["-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"  ]
+        considering line: [nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).]
+        considering line: [erase tmp/a_dlink.reg.c]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [resource file tmp/CMakeCUDACompilerId.cpp4.ii.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.cpp4.ii.res" > "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [resource file tmp/CMakeCUDACompilerId.cpp1.ii.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.cpp1.ii.res" > "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx""]
+        considering line: [ptxas -arch=sm_52 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [resource file tmp/CMakeCUDACompilerId.obj.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"   "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.cpp" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.obj.res" -Fo"tmp/CMakeCUDACompilerId.obj" ]
+        considering line: [CMakeCUDACompilerId.cudafe1.cpp]
+        considering line: [resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]]
+          extracted link line: [resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]]
+        considering line: [nvlink -optf "tmp/a_dlink.sm_52.cubin.optf"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: [resource file tmp/a_dlink.obj.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP -EHsc -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\""  -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\crt\\link.stub" ]]
+        considering line: [cl.exe @"tmp/a_dlink.obj.res" -Fo"tmp/a_dlink.obj" ]
+        considering line: [link.stub]
+        considering line: [resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]]
+          extracted link line: [resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]]
+        considering line: [cl.exe @"tmp/a.exe.res" -Fe"a.exe" ]
+          extracted link line: [cl.exe -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib -Fe"a.exe" ]
+        considering line: [  正在创建库 a.lib 和对象 a.exp]
+        considering line: []
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld cl.exe -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib -Fe"a.exe" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [cl.exe] ==> recognize MSVC cl
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-D__NV_LEGACY_LAUNCH] ==> ignore
+          arg [-nologo] ==> ignore
+          arg [E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj] ==> ignore
+          arg [E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj] ==> ignore
+          arg [-link] ==> ignore MSVC cl option
+          arg [-INCREMENTAL:NO] ==> ignore
+          arg [/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64] ==> dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64]
+          arg [cudadevrt.lib] ==> lib [cudadevrt.lib]
+          arg [cudart_static.lib] ==> lib [cudart_static.lib]
+          arg [-Fea.exe] ==> ignore
+        collapse library dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit libs: [cudadevrt.lib;cudart_static.lib]
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0m8dtl"
+      binary: "E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0m8dtl"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "E:/VS2022/IDE/VC/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "E:/VS2022/IDE/VC/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-0m8dtl'
+        
+        Run Build Command(s): e:\\vs2022\\ide\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_52952
+        [1/2] E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_52952.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_52952.dir\\ /FS -c E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_52952.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\100261~1.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\100261~1.0\\x64\\mt.exe" --manifests  -- E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_52952.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_52952.exe /implib:cmTC_52952.lib /pdb:cmTC_52952.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Running the CXX compiler's linker: "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35228.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.44.35228 版
+      版权所有(C) Microsoft Corporation。保留所有权利。
+      
+      CMakeCXXCompilerId.cpp
+      Microsoft (R) Incremental Linker Version 14.44.35228.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCXXCompilerId.exe 
+      CMakeCXXCompilerId.obj 
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is MSVC, found in:
+        E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/3.31.6-msvc6/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        注意: 包含文件:  E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "注意: 包含文件:  "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1237 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+      nvcc: NVIDIA (R) Cuda compiler driver
+      Copyright (c) 2005-2025 NVIDIA Corporation
+      Built on Wed_Apr__9_19:29:17_Pacific_Daylight_Time_2025
+      Cuda compilation tools, release 12.9, V12.9.41
+      Build cuda_12.9.r12.9/compiler.35813241_0
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.44.35228 版
+      版权所有(C) Microsoft Corporation。保留所有权利。
+      
+      CMakeCXXCompilerId.cpp
+      Microsoft (R) Incremental Linker Version 14.44.35228.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCXXCompilerId.exe 
+      CMakeCXXCompilerId.obj 
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is MSVC, found in:
+        E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/3.31.6-msvc6/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        注意: 包含文件:  E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "注意: 包含文件:  "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1237 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+      nvcc: NVIDIA (R) Cuda compiler driver
+      Copyright (c) 2005-2025 NVIDIA Corporation
+      Built on Wed_Apr__9_19:29:17_Pacific_Daylight_Time_2025
+      Cuda compilation tools, release 12.9, V12.9.41
+      Build cuda_12.9.r12.9/compiler.35813241_0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:53 (__determine_compiler_id_test)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+      Compiler: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/nvcc.exe 
+      Build flags: 
+      Id flags: --keep;--keep-dir;tmp -v
+      
+      The output was:
+      0
+      nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+      #$ PATH=E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\VCPackages;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;E:\\VS2022\\IDE\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\HTML Help Workshop;E:\\VS2022\\IDE\\Team Tools\\DiagnosticsHub\\Collector;E:\\VS2022\\IDE\\VC\\Tools\\Llvm\\x64\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;E:\\VS2022\\IDE\\\\MSBuild\\Current\\Bin\\amd64;C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319;E:\\VS2022\\IDE\\Common7\\IDE\\;E:\\VS2022\\IDE\\Common7\\Tools\\;C:Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\bin\\win64;C:\\WINDOWS\\system32;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Anaconda3\\Library\\bin;C:\\Anaconda3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\WINDOWS\\system32;E:\\CMake\\source\\bin;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Java\\bin;C:\\Java\\JDK\\bin;C:\\Java\\JRE\\bin\\server;C:\\src\\vcpkg;E:\\NodeJs\\source\\;E:\\QTCompile\\gperf\\source\\GnuWin32\\bin;E:\\QTCompile\\bison\\source\\GnuWin32\\bin;E:\\QTCompile\\flex\\source\\GnuWin32\\bin;C:\\Beyond Compare 4;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;E:\\weixin\\IDE\\΢\xd0\xc5web\xbf\xaa\xb7\xa2\xd5߹\xa4\xbe\xdf\\dll;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code;E:\\DependencyCheck\\dependency-check\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.0\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;E:\\Matlab\\Runtime\\2023bRuntime\\R2023b\\runtime\\win64;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Pandoc\\;E:\\Cursor\\install\\cursor\\resources\\app\\bin;C:\\Program Files\\TortoiseSVN\\bin;E:\\Clangd\\clangd_22.1.0\\bin;C:\\opencv4110\\x64\\vc17\\bin;E:\\GitLFS\\install;E:\\Python31011\\install\\Scripts\\;E:\\Python31011\\install\\;e:\\Cursor\\install\\cursor\\resources\\app\\codeBin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Launcher\\;%CMAKE_ROOT%;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\.dotnet\\tools;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;E:\\VS2022\\IDE\\VC\\vcpkg
+      #$ _NVVM_BRANCH_=nvvm
+      #$ _SPACE_= 
+      #$ _CUDART_=cudart
+      #$ _HERE_=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin
+      #$ _THERE_=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin
+      #$ _TARGET_SIZE_=
+      #$ _TARGET_DIR_=
+      #$ _TARGET_SIZE_=64
+      #$ _WIN_PLATFORM_=x64
+      #$ TOP=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/..
+      #$ CICC_PATH=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../nvvm/bin
+      #$ NVVMIR_LIBRARY_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../nvvm/libdevice
+      #$ PATH=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../nvvm/bin;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\VCPackages;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;E:\\VS2022\\IDE\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\HTML Help Workshop;E:\\VS2022\\IDE\\Team Tools\\DiagnosticsHub\\Collector;E:\\VS2022\\IDE\\VC\\Tools\\Llvm\\x64\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;E:\\VS2022\\IDE\\\\MSBuild\\Current\\Bin\\amd64;C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319;E:\\VS2022\\IDE\\Common7\\IDE\\;E:\\VS2022\\IDE\\Common7\\Tools\\;C:Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\bin\\win64;C:\\WINDOWS\\system32;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Anaconda3\\Library\\bin;C:\\Anaconda3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\WINDOWS\\system32;E:\\CMake\\source\\bin;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Java\\bin;C:\\Java\\JDK\\bin;C:\\Java\\JRE\\bin\\server;C:\\src\\vcpkg;E:\\NodeJs\\source\\;E:\\QTCompile\\gperf\\source\\GnuWin32\\bin;E:\\QTCompile\\bison\\source\\GnuWin32\\bin;E:\\QTCompile\\flex\\source\\GnuWin32\\bin;C:\\Beyond Compare 4;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;E:\\weixin\\IDE\\΢\xd0\xc5web\xbf\xaa\xb7\xa2\xd5߹\xa4\xbe\xdf\\dll;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code;E:\\DependencyCheck\\dependency-check\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.0\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;E:\\Matlab\\Runtime\\2023bRuntime\\R2023b\\runtime\\win64;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Pandoc\\;E:\\Cursor\\install\\cursor\\resources\\app\\bin;C:\\Program Files\\TortoiseSVN\\bin;E:\\Clangd\\clangd_22.1.0\\bin;C:\\opencv4110\\x64\\vc17\\bin;E:\\GitLFS\\install;E:\\Python31011\\install\\Scripts\\;E:\\Python31011\\install\\;e:\\Cursor\\install\\cursor\\resources\\app\\codeBin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Launcher\\;%CMAKE_ROOT%;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\.dotnet\\tools;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;E:\\VS2022\\IDE\\VC\\vcpkg
+      #$ INCLUDES="-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"  
+      #$ LIBRARIES=  "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"
+      #$ CUDAFE_FLAGS=
+      #$ PTXAS_FLAGS=
+      #$ erase tmp/a_dlink.reg.c
+      CMakeCUDACompilerId.cu
+      #$ resource file tmp/CMakeCUDACompilerId.cpp4.ii.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]
+      #$ cl.exe @"tmp/CMakeCUDACompilerId.cpp4.ii.res" > "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      CMakeCUDACompilerId.cu
+      #$ cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      #$ resource file tmp/CMakeCUDACompilerId.cpp1.ii.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]
+      #$ cl.exe @"tmp/CMakeCUDACompilerId.cpp1.ii.res" > "tmp/CMakeCUDACompilerId.cpp1.ii" 
+      CMakeCUDACompilerId.cu
+      #$ ""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx""
+      #$ ptxas -arch=sm_52 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" 
+      #$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+      #$ resource file tmp/CMakeCUDACompilerId.obj.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"   "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.cpp" ]
+      #$ cl.exe @"tmp/CMakeCUDACompilerId.obj.res" -Fo"tmp/CMakeCUDACompilerId.obj" 
+      CMakeCUDACompilerId.cudafe1.cpp
+      #$ resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]
+      #$ nvlink -optf "tmp/a_dlink.sm_52.cubin.optf"
+      #$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+      #$ resource file tmp/a_dlink.obj.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP -EHsc -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\""  -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\crt\\link.stub" ]
+      #$ cl.exe @"tmp/a_dlink.obj.res" -Fo"tmp/a_dlink.obj" 
+      link.stub
+      #$ resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]
+      #$ cl.exe @"tmp/a.exe.res" -Fe"a.exe" 
+        正在创建库 a.lib 和对象 a.exp
+      
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.exe"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.exp"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.lib"
+      
+      The CUDA compiler identification is NVIDIA, found in:
+        E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/3.31.6-msvc6/CompilerIdCUDA/a.exe
+      The host compiler identification is MSVC
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Detecting CUDA compiler /showIncludes prefix:
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        nvcc fatal   : Don't know what to do with 'E:/c'
+        
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Detecting CUDA compiler /showIncludes prefix:
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        nvcc fatal   : Don't know what to do with 'E:/c'
+        
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:128 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:242 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed CUDA nvcc implicit link information:
+        found 'PATH=' string: [E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\VCPackages;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;E:\\VS2022\\IDE\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\HTML Help Workshop;E:\\VS2022\\IDE\\Team Tools\\DiagnosticsHub\\Collector;E:\\VS2022\\IDE\\VC\\Tools\\Llvm\\x64\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;E:\\VS2022\\IDE\\\\MSBuild\\Current\\Bin\\amd64;C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319;E:\\VS2022\\IDE\\Common7\\IDE\\;E:\\VS2022\\IDE\\Common7\\Tools\\;C:Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\bin\\win64;C:\\WINDOWS\\system32;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Anaconda3\\Library\\bin;C:\\Anaconda3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\WINDOWS\\system32;E:\\CMake\\source\\bin;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Java\\bin;C:\\Java\\JDK\\bin;C:\\Java\\JRE\\bin\\server;C:\\src\\vcpkg;E:\\NodeJs\\source\\;E:\\QTCompile\\gperf\\source\\GnuWin32\\bin;E:\\QTCompile\\bison\\source\\GnuWin32\\bin;E:\\QTCompile\\flex\\source\\GnuWin32\\bin;C:\\Beyond Compare 4;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;E:\\weixin\\IDE\\΢\xd0\xc5web\xbf\xaa\xb7\xa2\xd5߹\xa4\xbe\xdf\\dll;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code;E:\\DependencyCheck\\dependency-check\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.0\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;E:\\Matlab\\Runtime\\2023bRuntime\\R2023b\\runtime\\win64;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Pandoc\\;E:\\Cursor\\install\\cursor\\resources\\app\\bin;C:\\Program Files\\TortoiseSVN\\bin;E:\\Clangd\\clangd_22.1.0\\bin;C:\\opencv4110\\x64\\vc17\\bin;E:\\GitLFS\\install;E:\\Python31011\\install\\Scripts\\;E:\\Python31011\\install\\;e:\\Cursor\\install\\cursor\\resources\\app\\codeBin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Launcher\\;%CMAKE_ROOT%;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\.dotnet\\tools;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;E:\\VS2022\\IDE\\VC\\vcpkg]
+        found 'LIBRARIES=' string: ["/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"]
+        found 'INCLUDES=' string: ["-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"  ]
+        considering line: [nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).]
+        considering line: [erase tmp/a_dlink.reg.c]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [resource file tmp/CMakeCUDACompilerId.cpp4.ii.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.cpp4.ii.res" > "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [resource file tmp/CMakeCUDACompilerId.cpp1.ii.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.cpp1.ii.res" > "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx""]
+        considering line: [ptxas -arch=sm_52 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [resource file tmp/CMakeCUDACompilerId.obj.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"   "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.cpp" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.obj.res" -Fo"tmp/CMakeCUDACompilerId.obj" ]
+        considering line: [CMakeCUDACompilerId.cudafe1.cpp]
+        considering line: [resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]]
+          extracted link line: [resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]]
+        considering line: [nvlink -optf "tmp/a_dlink.sm_52.cubin.optf"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: [resource file tmp/a_dlink.obj.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP -EHsc -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\""  -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\crt\\link.stub" ]]
+        considering line: [cl.exe @"tmp/a_dlink.obj.res" -Fo"tmp/a_dlink.obj" ]
+        considering line: [link.stub]
+        considering line: [resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]]
+          extracted link line: [resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]]
+        considering line: [cl.exe @"tmp/a.exe.res" -Fe"a.exe" ]
+          extracted link line: [cl.exe -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib -Fe"a.exe" ]
+        considering line: [  正在创建库 a.lib 和对象 a.exp]
+        considering line: []
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld cl.exe -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib -Fe"a.exe" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [cl.exe] ==> recognize MSVC cl
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-D__NV_LEGACY_LAUNCH] ==> ignore
+          arg [-nologo] ==> ignore
+          arg [E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj] ==> ignore
+          arg [E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj] ==> ignore
+          arg [-link] ==> ignore MSVC cl option
+          arg [-INCREMENTAL:NO] ==> ignore
+          arg [/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64] ==> dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64]
+          arg [cudadevrt.lib] ==> lib [cudadevrt.lib]
+          arg [cudart_static.lib] ==> lib [cudart_static.lib]
+          arg [-Fea.exe] ==> ignore
+        collapse library dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit libs: [cudadevrt.lib;cudart_static.lib]
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:146 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:242 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed CUDA nvcc include information:
+        found 'PATH=' string: [E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\VCPackages;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;E:\\VS2022\\IDE\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\\\x64;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Common\\VSPerfCollectionTools\\vs2019\\;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;C:\\Program Files (x86)\\HTML Help Workshop;E:\\VS2022\\IDE\\Team Tools\\DiagnosticsHub\\Collector;E:\\VS2022\\IDE\\VC\\Tools\\Llvm\\x64\\bin;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;E:\\VS2022\\IDE\\\\MSBuild\\Current\\Bin\\amd64;C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319;E:\\VS2022\\IDE\\Common7\\IDE\\;E:\\VS2022\\IDE\\Common7\\Tools\\;C:Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\bin\\win64;C:\\WINDOWS\\system32;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Anaconda3\\Library\\bin;C:\\Anaconda3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\libnvvp;C:\\WINDOWS\\system32;E:\\CMake\\source\\bin;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;E:\\Java\\bin;C:\\Java\\JDK\\bin;C:\\Java\\JRE\\bin\\server;C:\\src\\vcpkg;E:\\NodeJs\\source\\;E:\\QTCompile\\gperf\\source\\GnuWin32\\bin;E:\\QTCompile\\bison\\source\\GnuWin32\\bin;E:\\QTCompile\\flex\\source\\GnuWin32\\bin;C:\\Beyond Compare 4;E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx86\\x64;C:\\Program Files\\dotnet\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;E:\\weixin\\IDE\\΢\xd0\xc5web\xbf\xaa\xb7\xa2\xd5߹\xa4\xbe\xdf\\dll;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft VS Code;E:\\DependencyCheck\\dependency-check\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2025.2.0\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin;C:\\Program Files\\MATLAB\\MATLAB Runtime\\R2023a\\runtime\\win64;E:\\Matlab\\Runtime\\2023bRuntime\\R2023b\\runtime\\win64;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\Pandoc\\;E:\\Cursor\\install\\cursor\\resources\\app\\bin;C:\\Program Files\\TortoiseSVN\\bin;E:\\Clangd\\clangd_22.1.0\\bin;C:\\opencv4110\\x64\\vc17\\bin;E:\\GitLFS\\install;E:\\Python31011\\install\\Scripts\\;E:\\Python31011\\install\\;e:\\Cursor\\install\\cursor\\resources\\app\\codeBin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Launcher\\;%CMAKE_ROOT%;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\.dotnet\\tools;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;E:\\VS2022\\IDE\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;E:\\VS2022\\IDE\\VC\\vcpkg]
+        found 'LIBRARIES=' string: ["/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"]
+        found 'INCLUDES=' string: ["-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"  ]
+        considering line: [nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).]
+        considering line: [erase tmp/a_dlink.reg.c]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [resource file tmp/CMakeCUDACompilerId.cpp4.ii.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.cpp4.ii.res" > "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [cudafe++ --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [resource file tmp/CMakeCUDACompilerId.cpp1.ii.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "CMakeCUDACompilerId.cu" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.cpp1.ii.res" > "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [CMakeCUDACompilerId.cu]
+        considering line: [""%CICC_PATH%\\cicc" --ms_c++14 --microsoft_version=1944 --msvc_target_version=1944 --compiler_bindir "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx""]
+        considering line: [ptxas -arch=sm_52 -m64 "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [resource file tmp/CMakeCUDACompilerId.obj.res: [-D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"   "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.cpp" ]]
+        considering line: [cl.exe @"tmp/CMakeCUDACompilerId.obj.res" -Fo"tmp/CMakeCUDACompilerId.obj" ]
+        considering line: [CMakeCUDACompilerId.cudafe1.cpp]
+        considering line: [resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]]
+          extracted link line: [resource file tmp/a_dlink.sm_52.cubin.optf: [-m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.obj"  cudadevrt.lib  -o "tmp/a_dlink.sm_52.cubin"]]
+        considering line: [nvlink -optf "tmp/a_dlink.sm_52.cubin.optf"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: [resource file tmp/a_dlink.obj.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo -c -TP -EHsc -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\""  -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=9 -D__CUDACC_VER_BUILD__=41 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=9 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.9\\bin\\crt\\link.stub" ]]
+        considering line: [cl.exe @"tmp/a_dlink.obj.res" -Fo"tmp/a_dlink.obj" ]
+        considering line: [link.stub]
+        considering line: [resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]]
+          extracted link line: [resource file tmp/a.exe.res: [-D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib]]
+        considering line: [cl.exe @"tmp/a.exe.res" -Fe"a.exe" ]
+          extracted link line: [cl.exe -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib -Fe"a.exe" ]
+        considering line: [  正在创建库 a.lib 和对象 a.exp]
+        considering line: []
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld cl.exe -D__CUDA_ARCH_LIST__=520 -D__NV_LEGACY_LAUNCH -nologo "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj" "E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib -Fe"a.exe" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [cl.exe] ==> recognize MSVC cl
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-D__NV_LEGACY_LAUNCH] ==> ignore
+          arg [-nologo] ==> ignore
+          arg [E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\a_dlink.obj] ==> ignore
+          arg [E:\\CUDA\\Learning\\CudaStudy\\OCTCuda\\OCTCudaProject\\OCTCudaCmake\\out\\build\\x64-Debug\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj] ==> ignore
+          arg [-link] ==> ignore MSVC cl option
+          arg [-INCREMENTAL:NO] ==> ignore
+          arg [/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64] ==> dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64]
+          arg [cudadevrt.lib] ==> lib [cudadevrt.lib]
+          arg [cudart_static.lib] ==> lib [cudart_static.lib]
+          arg [-Fea.exe] ==> ignore
+        collapse library dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/../lib/x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit libs: [cudadevrt.lib;cudart_static.lib]
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-tzvjs9"
+      binary: "E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-tzvjs9"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "E:/VS2022/IDE/VC/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "E:/VS2022/IDE/VC/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-tzvjs9'
+        
+        Run Build Command(s): e:\\vs2022\\ide\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_f6f37
+        [1/2] E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /GR /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f6f37.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_f6f37.dir\\ /FS -c E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_f6f37.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\100261~1.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\100261~1.0\\x64\\mt.exe" --manifests  -- E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_f6f37.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_f6f37.exe /implib:cmTC_f6f37.lib /pdb:cmTC_f6f37.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Running the CXX compiler's linker: "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35228.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    checks:
+      - "Detecting CUDA compiler ABI info"
+    directories:
+      source: "E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ewtyyi"
+      binary: "E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ewtyyi"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: "-D_WINDOWS -Xcompiler=\" /GR /EHsc\""
+      CMAKE_CUDA_FLAGS_DEBUG: "-Xcompiler=\" -Zi -Ob0 -Od /RTC1\""
+      CMAKE_CUDA_RUNTIME_LIBRARY: "Static"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "E:/VS2022/IDE/VC/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "E:/VS2022/IDE/VC/vcpkg"
+    buildResult:
+      variable: "CMAKE_CUDA_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ewtyyi'
+        
+        Run Build Command(s): e:\\vs2022\\ide\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_ce68b
+        [1/2] C:\\PROGRA~1\\NVIDIA~1\\CUDA\\v12.9\\bin\\nvcc.exe -forward-unknown-to-host-compiler   -D_WINDOWS -Xcompiler=" /GR /EHsc"  -Xcompiler=" -Zi -Ob0 -Od /RTC1" "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -Xcompiler=-MDd   -Xcompiler=-v -MD -MT CMakeFiles\\cmTC_ce68b.dir\\CMakeCUDACompilerABI.cu.obj -MF CMakeFiles\\cmTC_ce68b.dir\\CMakeCUDACompilerABI.cu.obj.d -x cu -c E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu -o CMakeFiles\\cmTC_ce68b.dir\\CMakeCUDACompilerABI.cu.obj -Xcompiler=-FdCMakeFiles\\cmTC_ce68b.dir\\,-FS
+        cl: 命令行 warning D9002 :忽略未知选项“-v”
+        CMakeCUDACompilerABI.cu
+        cl: 命令行 warning D9002 :忽略未知选项“-v”
+        CMakeCUDACompilerABI.cu
+        nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+        CMakeCUDACompilerABI.cu
+        cl: 命令行 warning D9002 :忽略未知选项“-v”
+        tmpxft_00007298_00000000-7_CMakeCUDACompilerABI.cudafe1.cpp
+        E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: “return”: 从“int”到“bool”截断\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_ce68b.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\100261~1.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\100261~1.0\\x64\\mt.exe" --manifests  -- E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ce68b.dir\\CMakeCUDACompilerABI.cu.obj  /out:cmTC_ce68b.exe /implib:cmTC_ce68b.lib /pdb:cmTC_ce68b.pdb /version:0.0 /machine:x64 -v /debug /INCREMENTAL  cudadevrt.lib  cudart_static.lib -LIBPATH:"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64" && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed CUDA implicit include dir info: rv=start
+        warn: unable to parse implicit include dirs!
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed CUDA implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        ignore line: [Change Dir: 'E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-ewtyyi']
+        ignore line: []
+        ignore line: [Run Build Command(s): e:\\vs2022\\ide\\common7\\ide\\commonextensions\\microsoft\\cmake\\Ninja\\ninja.exe -v cmTC_ce68b]
+        ignore line: [[1/2] C:\\PROGRA~1\\NVIDIA~1\\CUDA\\v12.9\\bin\\nvcc.exe -forward-unknown-to-host-compiler   -D_WINDOWS -Xcompiler=" /GR /EHsc"  -Xcompiler=" -Zi -Ob0 -Od /RTC1" "--generate-code=arch=compute_52 code=[compute_52 sm_52]" -Xcompiler=-MDd   -Xcompiler=-v -MD -MT CMakeFiles\\cmTC_ce68b.dir\\CMakeCUDACompilerABI.cu.obj -MF CMakeFiles\\cmTC_ce68b.dir\\CMakeCUDACompilerABI.cu.obj.d -x cu -c E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu -o CMakeFiles\\cmTC_ce68b.dir\\CMakeCUDACompilerABI.cu.obj -Xcompiler=-FdCMakeFiles\\cmTC_ce68b.dir\\ -FS]
+        ignore line: [cl: 命令行 warning D9002 :忽略未知选项“-v”]
+        ignore line: [CMakeCUDACompilerABI.cu]
+        ignore line: [cl: 命令行 warning D9002 :忽略未知选项“-v”]
+        ignore line: [CMakeCUDACompilerABI.cu]
+        ignore line: [nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).]
+        ignore line: [CMakeCUDACompilerABI.cu]
+        ignore line: [cl: 命令行 warning D9002 :忽略未知选项“-v”]
+        ignore line: [tmpxft_00007298_00000000-7_CMakeCUDACompilerABI.cudafe1.cpp]
+        ignore line: [E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: “return”: 从“int”到“bool”截断\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && E:\\VS2022\\IDE\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_ce68b.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\100261~1.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\100261~1.0\\x64\\mt.exe" --manifests  -- E:\\VS2022\\IDE\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ce68b.dir\\CMakeCUDACompilerABI.cu.obj  /out:cmTC_ce68b.exe /implib:cmTC_ce68b.lib /pdb:cmTC_ce68b.pdb /version:0.0 /machine:x64 -v /debug /INCREMENTAL  cudadevrt.lib  cudart_static.lib -LIBPATH:"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/lib/x64" && cd ."]
+        ignore line: []
+        ignore line: []
+        linker tool for 'CUDA': E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "E:/VS2022/IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Running the CUDA compiler's linker: "E:/VS2022/IDE/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35228.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...
