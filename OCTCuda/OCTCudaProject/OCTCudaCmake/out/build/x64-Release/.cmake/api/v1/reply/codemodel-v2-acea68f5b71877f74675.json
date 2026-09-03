@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "oct_cuda_pipeline",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "oct_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-oct_core-RelWithDebInfo-22bbf3caa20eb5f4d1ac.json",
+					"name" : "oct_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "oct_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-oct_demo-RelWithDebInfo-1a75c9530cb69a781bfd.json",
+					"name" : "oct_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "oct_test_resample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-oct_test_resample-RelWithDebInfo-815bc23ea044df98dacc.json",
+					"name" : "oct_test_resample",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release",
+		"source" : "E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

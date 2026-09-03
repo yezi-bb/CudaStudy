@@ -41,25 +41,60 @@ include CMakeFiles\rules.ninja
 
 cmake_ninja_workdir = E$:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\out\build\x64-Release\
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target oct_core
+
+
+#############################################
+# Order-only phony target for oct_core
+
+build cmake_object_order_depends_target_oct_core: phony || .
+
+build CMakeFiles\oct_core.dir\src\host\context.cpp.obj: CXX_COMPILER__oct_core_unscanned_RelWithDebInfo E$:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host\context.cpp || cmake_object_order_depends_target_oct_core
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8
+  INCLUDES = -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\include -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host -external:I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -external:W0
+  OBJECT_DIR = CMakeFiles\oct_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\oct_core.dir\src\host
+  TARGET_COMPILE_PDB = CMakeFiles\oct_core.dir\oct_core.pdb
+  TARGET_PDB = oct_core.pdb
+
+build CMakeFiles\oct_core.dir\src\host\resample_window.cpp.obj: CXX_COMPILER__oct_core_unscanned_RelWithDebInfo E$:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host\resample_window.cpp || cmake_object_order_depends_target_oct_core
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8
+  INCLUDES = -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\include -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host -external:I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -external:W0
+  OBJECT_DIR = CMakeFiles\oct_core.dir
+  OBJECT_FILE_DIR = CMakeFiles\oct_core.dir\src\host
+  TARGET_COMPILE_PDB = CMakeFiles\oct_core.dir\oct_core.pdb
+  TARGET_PDB = oct_core.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target oct_core
+
+
+#############################################
+# Link the static library oct_core.lib
+
+build oct_core.lib: CXX_STATIC_LIBRARY_LINKER__oct_core_RelWithDebInfo CMakeFiles\oct_core.dir\src\host\context.cpp.obj CMakeFiles\oct_core.dir\src\host\resample_window.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = CMakeFiles\oct_core.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\oct_core.dir\oct_core.pdb
+  TARGET_FILE = oct_core.lib
+  TARGET_PDB = oct_core.pdb
+
+# =============================================================================
 # Object build statements for EXECUTABLE target oct_demo
 
 
 #############################################
 # Order-only phony target for oct_demo
 
-build cmake_object_order_depends_target_oct_demo: phony || .
+build cmake_object_order_depends_target_oct_demo: phony || cmake_object_order_depends_target_oct_core
 
 build CMakeFiles\oct_demo.dir\src\host\main.cpp.obj: CXX_COMPILER__oct_demo_unscanned_RelWithDebInfo E$:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host\main.cpp || cmake_object_order_depends_target_oct_demo
-  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD
-  INCLUDES = -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\include -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host -external:I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -external:W0
-  OBJECT_DIR = CMakeFiles\oct_demo.dir
-  OBJECT_FILE_DIR = CMakeFiles\oct_demo.dir\src\host
-  TARGET_COMPILE_PDB = CMakeFiles\oct_demo.dir\
-  TARGET_PDB = oct_demo.pdb
-
-build CMakeFiles\oct_demo.dir\src\host\context.cpp.obj: CXX_COMPILER__oct_demo_unscanned_RelWithDebInfo E$:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host\context.cpp || cmake_object_order_depends_target_oct_demo
-  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD
-  INCLUDES = -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\include -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host -external:I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -external:W0
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8
+  INCLUDES = -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\OCTImages -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\include -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host -external:I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -external:W0
   OBJECT_DIR = CMakeFiles\oct_demo.dir
   OBJECT_FILE_DIR = CMakeFiles\oct_demo.dir\src\host
   TARGET_COMPILE_PDB = CMakeFiles\oct_demo.dir\
@@ -73,10 +108,10 @@ build CMakeFiles\oct_demo.dir\src\host\context.cpp.obj: CXX_COMPILER__oct_demo_u
 #############################################
 # Link the executable oct_demo.exe
 
-build oct_demo.exe: CXX_EXECUTABLE_LINKER__oct_demo_RelWithDebInfo CMakeFiles\oct_demo.dir\src\host\main.cpp.obj CMakeFiles\oct_demo.dir\src\host\context.cpp.obj | C$:\Program$ Files\NVIDIA$ GPU$ Computing$ Toolkit\CUDA\v12.9\lib\x64\cudart.lib
+build oct_demo.exe: CXX_EXECUTABLE_LINKER__oct_demo_RelWithDebInfo CMakeFiles\oct_demo.dir\src\host\main.cpp.obj | oct_core.lib C$:\Program$ Files\NVIDIA$ GPU$ Computing$ Toolkit\CUDA\v12.9\lib\x64\cudart.lib || oct_core.lib
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\lib\x64\cudart.lib"  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = oct_core.lib  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\lib\x64\cudart.lib"  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\oct_demo.dir
   POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\out\build\x64-Release && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file E:/VS2022/IDE/VC/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release/oct_demo.exe -installedDir E:/VS2022/IDE/VC/vcpkg/installed/x64-windows/bin -OutVariable out && cd /D E:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\out\build\x64-Release && E:\VS2022\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/cudart64_12.dll" E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release"
   PRE_LINK = cd .
@@ -84,6 +119,55 @@ build oct_demo.exe: CXX_EXECUTABLE_LINKER__oct_demo_RelWithDebInfo CMakeFiles\oc
   TARGET_FILE = oct_demo.exe
   TARGET_IMPLIB = oct_demo.lib
   TARGET_PDB = oct_demo.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target oct_test_resample
+
+
+#############################################
+# Order-only phony target for oct_test_resample
+
+build cmake_object_order_depends_target_oct_test_resample: phony || cmake_object_order_depends_target_oct_core
+
+build CMakeFiles\oct_test_resample.dir\tests\test_resample_window.cpp.obj: CXX_COMPILER__oct_test_resample_unscanned_RelWithDebInfo E$:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\tests\test_resample_window.cpp || cmake_object_order_depends_target_oct_test_resample
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD /utf-8
+  INCLUDES = -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\include -IE:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\src\host -external:I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\include" -external:W0
+  OBJECT_DIR = CMakeFiles\oct_test_resample.dir
+  OBJECT_FILE_DIR = CMakeFiles\oct_test_resample.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\oct_test_resample.dir\
+  TARGET_PDB = oct_test_resample.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target oct_test_resample
+
+
+#############################################
+# Link the executable oct_test_resample.exe
+
+build oct_test_resample.exe: CXX_EXECUTABLE_LINKER__oct_test_resample_RelWithDebInfo CMakeFiles\oct_test_resample.dir\tests\test_resample_window.cpp.obj | oct_core.lib C$:\Program$ Files\NVIDIA$ GPU$ Computing$ Toolkit\CUDA\v12.9\lib\x64\cudart.lib || oct_core.lib
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = oct_core.lib  "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9\lib\x64\cudart.lib"  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\oct_test_resample.dir
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\out\build\x64-Release && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file E:/VS2022/IDE/VC/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release/oct_test_resample.exe -installedDir E:/VS2022/IDE/VC/vcpkg/installed/x64-windows/bin -OutVariable out && cd /D E:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\out\build\x64-Release && E:\VS2022\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E copy_if_different "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.9/bin/cudart64_12.dll" E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release"
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\oct_test_resample.dir\
+  TARGET_FILE = oct_test_resample.exe
+  TARGET_IMPLIB = oct_test_resample.lib
+  TARGET_PDB = oct_test_resample.pdb
+
+
+#############################################
+# Utility command for test
+
+build CMakeFiles\test.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\CUDA\Learning\CudaStudy\OCTCuda\OCTCudaProject\OCTCudaCmake\out\build\x64-Release && E:\VS2022\IDE\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\ctest.exe --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles\test.util
 
 
 #############################################
@@ -111,7 +195,11 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build oct_core: phony oct_core.lib
+
 build oct_demo: phony oct_demo.exe
+
+build oct_test_resample: phony oct_test_resample.exe
 
 # =============================================================================
 # Folder targets.
@@ -121,7 +209,7 @@ build oct_demo: phony oct_demo.exe
 #############################################
 # Folder: E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release
 
-build all: phony oct_demo.exe
+build all: phony oct_core.lib oct_demo.exe oct_test_resample.exe
 
 # =============================================================================
 # Built-in targets

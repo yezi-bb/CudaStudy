@@ -1,3 +1,6 @@
+E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release/CMakeFiles/oct_core.dir
 E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release/CMakeFiles/oct_demo.dir
+E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release/CMakeFiles/oct_test_resample.dir
+E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release/CMakeFiles/test.dir
 E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release/CMakeFiles/edit_cache.dir
 E:/CUDA/Learning/CudaStudy/OCTCuda/OCTCudaProject/OCTCudaCmake/out/build/x64-Release/CMakeFiles/rebuild_cache.dir
