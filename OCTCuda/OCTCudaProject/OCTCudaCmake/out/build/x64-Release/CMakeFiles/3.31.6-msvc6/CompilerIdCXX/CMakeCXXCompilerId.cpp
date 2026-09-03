@@ -897,4 +897,23 @@ int main(int argc, char* argv[])
   require += info_compiler[argc];
   require += info_platform[argc];
   require += info_arch[argc];
-#ifdef COMPILER_V
+#ifdef COMPILER_VERSION_MAJOR
+  require += info_version[argc];
+#endif
+#ifdef COMPILER_VERSION_INTERNAL
+  require += info_version_internal[argc];
+#endif
+#ifdef SIMULATE_ID
+  require += info_simulate[argc];
+#endif
+#ifdef SIMULATE_VERSION_MAJOR
+  require += info_simulate_version[argc];
+#endif
+#if defined(__CRAYXT_COMPUTE_LINUX_TARGET)
+  require += info_cray[argc];
+#endif
+  require += info_language_standard_default[argc];
+  require += info_language_extensions_default[argc];
+  (void)argv;
+  return require;
+}

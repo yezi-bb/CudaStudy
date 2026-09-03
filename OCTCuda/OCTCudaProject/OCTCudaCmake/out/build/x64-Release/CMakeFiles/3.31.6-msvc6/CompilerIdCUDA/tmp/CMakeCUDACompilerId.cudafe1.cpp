@@ -23992,4 +23992,21 @@ require += (info_host_compiler[argc]);
 #line 928 "CMakeCUDACompilerId.cu"
 require += (info_host_compiler_version[argc]); 
 #line 930 "CMakeCUDACompilerId.cu"
-require += (info_langua
+require += (info_language_standard_default[argc]); 
+#line 931
+require += (info_language_extensions_default[argc]); 
+#line 932
+(void)argv; 
+#line 933
+return require; 
+#line 934
+} 
+#line 1 "CMakeCUDACompilerId.cudafe1.stub.c"
+#define _NV_ANON_NAMESPACE _GLOBAL__N__5d35d234_22_CMakeCUDACompilerId_cu_bd57c623
+#ifdef _NV_ANON_NAMESPACE
+#endif
+#pragma pack()
+#line 1 "CMakeCUDACompilerId.cudafe1.stub.c"
+#include "CMakeCUDACompilerId.cudafe1.stub.c"
+#line 1 "CMakeCUDACompilerId.cudafe1.stub.c"
+#undef _NV_ANON_NAMESPACE

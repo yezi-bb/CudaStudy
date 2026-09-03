@@ -40,4 +40,23 @@ static const __declspec(allocate(__CUDAFATBINDATASECTION)) unsigned long long fa
 0x0000000000000070ull,0x0000000000000070ull,0x0000000000000008ull,0x0000005001010001ull,
 0x0000000000000048ull,0x0000004000000042ull,0x0000003400080008ull,0x0000000000000000ull,
 0x0000000000002041ull,0x0000000000000000ull,0x0000000000000052ull,0x0000000000000048ull,
-0x0000000000000000ull,0x0300042f2f0a0d4full,0x7265762e0a0
+0x0000000000000000ull,0x0300042f2f0a0d4full,0x7265762e0a0d29f0ull,0x382e38206e6f6973ull,
+0x65677261742e0a0dull,0x0d32355f6d732074ull,0x7365726464612e0aull,0x3620657a69735f73ull,
+0x0d0a0d0a0d0a0d34ull,0x000000000000000aull
+};
+#pragma const_seg()
+
+#ifdef __cplusplus
+}
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+#pragma const_seg(".nvFatBinSegment")
+__declspec(allocate(__CUDAFATBINSECTION)) __declspec(align(8)) static const __fatBinC_Wrapper_t __fatDeviceText= 
+	{ 0x466243b1, 1, fatbinData, 0 };
+#pragma const_seg()
+#ifdef __cplusplus
+}
+#endif
